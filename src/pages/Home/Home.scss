@@ -1,0 +1,179 @@
+@use "../../App.scss" as a;
+
+.homeP1 {
+    &__banner-left {
+        position: relative;
+        img {
+            border-radius: 10px;
+        }
+        &-content {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+
+            .title {
+                color: a.$text-banner-1;
+                font-size: 0.7rem;
+            }
+            .product-name {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+            .price {
+                font-size: 0.8rem;
+            }
+        }
+        .btn {
+            background-color: a.$bg-lightdark;
+            color: white;
+            &:hover {
+            color: a.$text-hover;
+            }
+        }
+    }
+
+    &__banner-right {
+        .banner {
+            position: relative;
+            display: flex;
+            padding: 0;
+            &:nth-child(1) {
+                padding-right: 4px;
+                padding-bottom: 4px;
+            }
+            &:nth-child(2) {
+                padding-left: 4px;
+                padding-bottom: 4px;
+            }
+            &:nth-child(3) {
+                padding-right: 4px;
+                padding-top: 4px;
+            }
+            &:nth-child(4) {
+                padding-left: 4px;
+                padding-top: 4px;
+            }
+            img {
+                border-radius: 5px;
+            }
+        }
+
+        &-content {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            .title {
+                color: a.$text-banner-1;
+                font-size: 0.7rem;
+            }
+            .product-name {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+            .price {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.homeP2 {
+    background-color: a.$bg-gray;
+    .services {
+        &__image {
+            margin-right: 16px;
+        }
+        &__scripts {
+            h6 {
+                font-size: 0.9rem;
+                margin: 0;
+            }
+            p {
+                margin: 0;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+
+.homeP3 {
+    background-color: a.$bg-gray;
+    padding-bottom: 20px;
+    .categories {
+        background-color: white;
+        box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.102);
+        
+        &__item {
+                border-right: 1px solid a.$border-catagories;
+                border-bottom: 1px solid a.$border-catagories;
+            &:hover {
+                box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.094);
+                // transform: translateY(-1px);
+            }
+            .scripts {
+                flex: 1;
+                h6 {
+                    font-size: 0.8rem;
+                    text-align: center;
+                }
+                p {
+                    margin: 0;
+                    text-align: center;
+                    font-size: 0.7rem;
+                }
+            }
+            .image {
+                width: 160px;
+                padding: 2px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.homeP5 {
+    background-color: #DEDEDE;
+    .products {
+        .card1 {
+            .product-card {
+                background-color: white;
+                .product-card__image {
+                    background-image: url('../../../public/images/dell-xps.png');
+                }
+            }
+        }
+    }
+}
+
+.homeP6 {
+    background-color: #DEDEDE;
+    padding: 20px;
+    .blog-cards {
+        .card1 {
+            .blog-card__image {
+                background-image: url('../../../public/images/blog-1.jpg');
+            }
+        }
+
+        // .card2 {
+        //     .blog-card__image {
+        //         // background-image: url('../../../public/images/blog-1.jpg');
+        //     }
+        // }
+
+        // .card3 {
+        //     .blog-card__image {
+        //         // background-image: url('../../../public/images/blog-1.jpg');
+        //     }
+        // }
+
+        // .card4 {
+        //     .blog-card__image {
+        //         // background-image: url('../../../public/images/blog-1.jpg');
+        //     }
+        // }
+    }
+}
+

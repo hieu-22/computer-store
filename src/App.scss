@@ -1,3 +1,12 @@
+// color var
+$text-banner-1:  hsl(23, 100%, 37%);
+$text-hover: hsl(0, 0%, 78%);
+$bg-gray: hsl(0, 0%, 87%);
+$bg-lightdark: hsl(212, 10%, 30%);
+$border-catagories: hsl(0, 0%, 87%);
+
+//
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -92,7 +101,7 @@ a {
           
           &:hover {
             background-color: transparent;
-            color: rgb(197, 197, 197);
+            color: $text-hover;
           }
         }
       }
@@ -154,7 +163,7 @@ footer {
         margin: 0 !important;
         padding: 2px 4px !important;
         &:hover {
-          color: rgb(199, 199, 199) !important;
+          color: $text-hover !important;
         }
       }
     }
@@ -163,5 +172,4 @@ footer {
     border-top: 1px solid rgb(172, 172, 172);
   }
 }
-
 // Footer Part Ends

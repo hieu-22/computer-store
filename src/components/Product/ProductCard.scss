@@ -1,0 +1,30 @@
+@use '../../App.scss' as a;
+
+.product-card {
+    max-width: 300px;
+    border-radius: 5px;
+
+    &__image {
+        background-size: cover;
+        height: 240px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    &__details {
+        padding: 15px;
+        .brand {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: a.$text-banner-1;
+            margin-bottom: 10px;
+        }
+        .name {
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+        .price {
+            font-size: 1rem;
+        }
+    }
+}

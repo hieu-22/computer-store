@@ -1,0 +1,32 @@
+@use '../../App.scss' as a;
+.blog-card {
+    background-color: white;
+    border-radius: 5px;
+
+    &__image {
+        background-size: cover;
+        height: 180px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    &__content {
+        padding: 15px;
+        .date {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: a.$bg-lightdark;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 1rem;
+        }
+        .description {
+            font-size: 0.8rem;
+            
+        }
+        .button {
+            font-size: 0.8rem;
+        }
+    }
+}
