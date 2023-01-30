@@ -1,0 +1,91 @@
+@use '../../App.scss' as a;
+.special-product-card {
+    max-width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 0;
+
+    .product-images {
+        
+        .main-image {
+            height: 180px;
+            background-image: url(../../../public/images/dell-xps.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .sub-image {
+            div {
+                height: 90px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &--1 {
+                background-image: url(../../../public/images/DELL-XPS-17-9710-2021-Features-01.jpeg);
+            }
+            &--2 {
+                background-image: url(../../../public/images/Dell-XPS-15-9520-02.webp);
+            }
+        }
+    }
+
+    .product-details {
+        padding: 15px;
+        font-size: 0.8rem;
+        .brand {
+            font-weight: bold;
+            color: a.$text-banner-1;
+            margin-bottom: 4px;
+        }
+        .name {
+            height: 48px;
+            font-size: 0.8rem;
+            margin-bottom: 6px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .price {
+            margin-bottom: 6px;
+        }
+        .discount-till {
+            white-space: nowrap;
+            margin-bottom: 4px;
+            .till-days {
+                padding: 4px;
+                padding-left: 0;
+                span {
+                  font-weight: bold;  
+                }
+            }
+            .counter {
+                span {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+
+    .product-count {
+        margin-bottom: 16px;
+        .progress {
+            height: 6px;
+        }
+    }
+
+    .add-button {
+        button {
+            background-color: #DEDEDE;
+            border: none;
+            color: rgb(51, 51, 51);
+            font-size: 0.8rem;
+            font-weight: 500;
+            border-radius: 25px;
+            &:hover {
+                background-color: #777777;
+                color: white;
+            }
+        }
+    }
+}

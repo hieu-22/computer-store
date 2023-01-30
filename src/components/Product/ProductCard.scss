@@ -3,12 +3,18 @@
 .product-card {
     max-width: 300px;
     border-radius: 5px;
+    background-color: white;
 
     &__image {
-        background-size: cover;
+        // background-image: url();
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
         height: 240px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        transition: 0.5s;
     }
 
     &__details {
@@ -25,6 +31,36 @@
         }
         .price {
             font-size: 1rem;
+        }
+    }
+
+    .wishlist {
+        top: 10px;
+        right: 8px;
+    }
+
+    .action-bar {
+        top: 40px;
+        right: 0;
+        opacity: 0;
+        transition: 0.3s;
+
+        a {
+            margin-bottom: 10px;
+                img {
+                    &:hover {
+                        transform: scale(1.2);
+                            filter: invert(7%) sepia(100%) saturate(7337%) hue-rotate(248deg) brightness(112%) contrast(141%);
+                    }
+                }
+        }
+
+    }
+    &:hover {
+        .action-bar {
+            top: 40px;
+            right: 6px;
+            opacity: 1;
         }
     }
 }

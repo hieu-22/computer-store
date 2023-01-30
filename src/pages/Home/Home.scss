@@ -78,7 +78,8 @@
 }
 
 .homeP2 {
-    background-color: a.$bg-gray;
+    background-color: a.$bg-home-main;
+    padding: 20px 0;
     .services {
         &__image {
             margin-right: 16px;
@@ -97,8 +98,8 @@
 }
 
 .homeP3 {
-    background-color: a.$bg-gray;
-    padding-bottom: 20px;
+    background-color: a.$bg-home-main;
+    padding-bottom: 50px;
     .categories {
         background-color: white;
         box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.102);
@@ -133,23 +134,43 @@
     }
 }
 
-.homeP5 {
-    background-color: #DEDEDE;
+.homeP4 {
+    background-color: a.$bg-home-main;
+    padding-bottom: 50px;
     .products {
+        & > div > a {
+            color: black;
+            &:hover {
+                color: black;
+            }
+        }
         .card1 {
             .product-card {
                 background-color: white;
                 .product-card__image {
                     background-image: url('../../../public/images/dell-xps.png');
                 }
+
+                &:hover {
+                    .product-card__image {
+                        background-image: url('../../../public/images/DELL-XPS-17-9710-2021-Features-01.jpeg');
+                    }
+                }
             }
         }
     }
 }
 
-.homeP6 {
+.homeP5 {
+    background-color: a.$bg-home-main;
+    padding-bottom: 50px;
+    .col-4 {
+        padding: 0 6px;
+    }
+}
+.homeP7 {
     background-color: #DEDEDE;
-    padding: 20px;
+    padding: 50px;
     .blog-cards {
         .card1 {
             .blog-card__image {
@@ -177,3 +198,32 @@
     }
 }
 
+.homeP8 {
+    background-color: a.$bg-home-main;
+    
+    .popular-product-card {
+        & > a {
+            color: black;
+            &:hover {
+                color: black;
+            }
+        }
+        .product-card__image {
+            height: 140px;
+            background-image: url(../../../public/images/dell-xps.png);
+        }
+        
+        .product-card__details {
+            .brand {
+                margin-bottom: 8px;
+            }
+            .name {
+                font-size: 0.8rem;
+                margin-bottom: 10px;
+            }
+            .price {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

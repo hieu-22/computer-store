@@ -5,10 +5,12 @@ import Marquee from 'react-fast-marquee'
 
 import Blogcard from '../../components/Blogcard/Blogcard'
 import ProductCard from '../../components/Product/ProductCard'
-
+import SpecialProductCard from '../../components/Product/SpecialProductCard'
+import Meta from '../../components/Meta'
 const Home = () => {
     return (
         <>
+            <Meta title="Computer" />
             <section className='homeP1'>
                 <div className="container-xl">
                     <div className="row">
@@ -76,6 +78,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
             <section className='homeP2'>
                 <div className="container-xl">
                     <div className="services row row-cols-5 py-5">
@@ -127,6 +130,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
             <section className='homeP3'>
                 <div className="container-xl">
                     <div className="row categories">
@@ -136,7 +140,7 @@ const Home = () => {
                                 <p>10 Items</p>
                             </div>
                             <div className="image">
-                                <img src="images/macbook-air.jpg" alt="image" />
+                                <img src="images/macbook-air.jpg" alt="product" />
                             </div>
                         </div>
                         <div className="col-3 categories__item d-flex align-item-center">
@@ -145,7 +149,7 @@ const Home = () => {
                                 <p>10 Items</p>
                             </div>
                             <div className="image">
-                                <img src="images/macbook-air.jpg" alt="image" />
+                                <img src="images/macbook-air.jpg" alt="product" />
                             </div>
                         </div>
                         <div className="col-3 categories__item d-flex align-item-center">
@@ -154,7 +158,7 @@ const Home = () => {
                                 <p>10 Items</p>
                             </div>
                             <div className="image">
-                                <img src="images/macbook-air.jpg" alt="image" />
+                                <img src="images/macbook-air.jpg" alt="product" />
                             </div>
                         </div>
                         <div className="col-3 categories__item d-flex align-item-center">
@@ -163,7 +167,7 @@ const Home = () => {
                                 <p>10 Items</p>
                             </div>
                             <div className="image">
-                                <img src="images/macbook-air.jpg" alt="image" />
+                                <img src="images/macbook-air.jpg" alt="product" />
                             </div>
                         </div>
                         <div className="col-3 categories__item d-flex align-item-center">
@@ -172,7 +176,7 @@ const Home = () => {
                                 <p>10 Items</p>
                             </div>
                             <div className="image">
-                                <img src="images/macbook-air.jpg" alt="image" />
+                                <img src="images/macbook-air.jpg" alt="product" />
                             </div>
                         </div>
                         <div className="col-3 categories__item d-flex align-item-center">
@@ -181,7 +185,7 @@ const Home = () => {
                                 <p>10 Items</p>
                             </div>
                             <div className="image">
-                                <img src="images/macbook-air.jpg" alt="image" />
+                                <img src="images/macbook-air.jpg" alt="product" />
                             </div>
                         </div>
                         <div className="col-3 categories__item d-flex align-item-center">
@@ -190,7 +194,7 @@ const Home = () => {
                                 <p>10 Items</p>
                             </div>
                             <div className="image">
-                                <img src="images/macbook-air.jpg" alt="image" />
+                                <img src="images/macbook-air.jpg" alt="product" />
                             </div>
                         </div>
                         <div className="col-3 categories__item d-flex align-item-center">
@@ -199,14 +203,109 @@ const Home = () => {
                                 <p>10 Items</p>
                             </div>
                             <div className="image">
-                                <img src="images/macbook-air.jpg" alt="image" />
+                                <img src="images/macbook-air.jpg" alt="product" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className='homeP4' >
-                <div className="container-fluid ">
+
+            <section className='homeP4'>
+                <div className="container py-3">
+                    <div className="row">
+                        <div className="col-12">
+                            <h4>Laptop Collection</h4>
+                        </div>
+                    </div>
+                    <div className="row products">
+                        <div className="card1 col-3 p-2">
+                            <Link to="#product">
+                                <ProductCard />
+                            </Link>
+                        </div>
+                        <div className="card1 col-3 p-2">
+                            <Link to="#product">
+                                <ProductCard />
+                            </Link>
+                        </div>
+                        <div className="card1 col-3 p-2">
+                            <Link to="#product">
+                                <ProductCard />
+                            </Link>
+                        </div>
+                        <div className="card1 col-3 p-2">
+                            <Link to="#product">
+                                <ProductCard />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='homeP5'>
+                <div className="container-xl">
+                    <div className="row">
+                        <div className="col-4">
+                            <SpecialProductCard />
+                        </div>
+                        <div className="col-4">
+                            <SpecialProductCard />
+                        </div>
+                        <div className="col-4">
+                            <SpecialProductCard />
+                        </div>
+                        <div className="col-4">
+                            <SpecialProductCard />
+                        </div>
+                        <div className="col-4">
+                            <SpecialProductCard />
+                        </div>
+                        <div className="col-4">
+                            <SpecialProductCard />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='homeP8'>
+                <div className="container-xl py-5">
+                    <div className="row">
+                        <div className="col-12">
+                            <h4>Our Popular Products</h4>
+                        </div>
+                    </div>
+                    <div className="row row-cols-5 popular-product-card">
+                        <Link to="#product">
+                            <div className="col">
+                                <ProductCard />
+                            </div>
+                        </Link>
+                        <Link to="#product">
+                            <div className="col">
+                                <ProductCard />
+                            </div>
+                        </Link>
+                        <Link to="#product">
+                            <div className="col">
+                                <ProductCard />
+                            </div>
+                        </Link>
+                        <Link to="#product">
+                            <div className="col">
+                                <ProductCard />
+                            </div>
+                        </Link>
+                        <Link to="#product">
+                            <div className="col">
+                                <ProductCard />
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            <section className='homeP6' >
+                <div className="container-fluid">
                     <div className="row m-0 w-100">
                         <div className="marquee-wrapper">
                             <Marquee speed={50} gradient={false}>
@@ -223,26 +322,8 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className='homeP5'>
-                <div className="container py-3">
-                    <h4>Laptop Collection</h4>
-                    <div className="row products">
-                        <div className="card1 col-3 p-2">
-                            <ProductCard />
-                        </div>
-                        <div className="card1 col-3 p-2">
-                            <ProductCard />
-                        </div>
-                        <div className="card1 col-3 p-2">
-                            <ProductCard />
-                        </div>
-                        <div className="card1 col-3 p-2">
-                            <ProductCard />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className='homeP6'>
+
+            <section className='homeP7'>
                 <div className="container-xl">
                     <h4>Our Latest Blogs</h4>
                     <div className="row blog-cards">

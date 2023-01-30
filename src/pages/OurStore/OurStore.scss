@@ -1,0 +1,55 @@
+@use '../../App.scss' as a;
+
+.store-wrapper {
+    background-color: hsl(210, 9%, 87%);
+    .filter-card {
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px 15px;
+
+        // use for all filter-card content
+        .filter-content {
+            font-size: 0.8rem;
+            line-height: 1.6rem;
+            color: a.$text-gray;
+            cursor: pointer;
+        }
+
+        .filter-title {
+            font-size: 1rem;
+            line-height: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+
+            color: a.$text-black;
+        }
+
+        .categories-list ul {
+            list-style-type: none;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+
+            color: a.$text-black;
+        }
+
+        .availability {
+            input {
+                border: 1px solid a.$bg-lightdark;
+                margin-top: 6px;
+                box-shadow: none;
+
+                &:hover {
+                    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.2);
+                }
+                &:checked {
+                    border: none;
+                    background-color: a.$bg-lightdark;
+                }
+            }
+        }
+    }
+}

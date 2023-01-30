@@ -90,10 +90,10 @@ const Header = () => {
                                     </div>
                                 </div>
                                 <nav className="menu-link d-flex align-item-center">
-                                    <NavLink className="d-block" to="/" activeClassName="active">Home</NavLink>
-                                    <NavLink className="d-block" to="/store" activeClassName="active">Store</NavLink>
-                                    <NavLink className="d-block" to="/blogs" activeClassName="active">Blogs</NavLink>
-                                    <NavLink className="d-block" to="/contact" activeClassName="active">Contact</NavLink>
+                                    <NavLink className="d-block" to="/" activeClassName="active">HOME</NavLink>
+                                    <NavLink className="d-block" to="/our-store" activeClassName="active">OUR STORE</NavLink>
+                                    <NavLink className="d-block" to="/blogs" activeClassName="active">BLOGS</NavLink>
+                                    <NavLink className="d-block" to="/contact" activeClassName="active">CONTACT</NavLink>
                                 </nav>
                             </div>
                         </div>
