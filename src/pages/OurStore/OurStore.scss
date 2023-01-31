@@ -1,55 +1,201 @@
-@use '../../App.scss' as a;
+@use "../../App.scss" as a;
 
 .store-wrapper {
-    background-color: hsl(210, 9%, 87%);
+  background-color: hsl(210, 9%, 87%);
+  .store-filter {
     .filter-card {
-        background-color: white;
-        border-radius: 5px;
-        padding: 10px 15px;
+      background-color: white;
+      border-radius: 5px;
+      padding: 15px 25px 25px 15px;
+      box-shadow: 0 0 4px 2px rgba(200, 200, 200, 0.5);
 
-        // use for all filter-card content
-        .filter-content {
-            font-size: 0.8rem;
-            line-height: 1.6rem;
-            color: a.$text-gray;
+      // use for all filter-card content
+      .filter-content {
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+        color: a.$text-gray;
+        cursor: pointer;
+      }
+
+      .filter-title {
+        font-size: 1rem;
+        line-height: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        color: a.$text-black;
+      }
+
+      .categories-list ul {
+        list-style-type: none;
+        margin: 0;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 25px 0 10px 0;
+
+        color: a.$text-black;
+      }
+
+      .availability {
+        input {
+          border: 1px solid a.$bg-lightdark;
+          margin-top: 6px;
+          box-shadow: none;
+
+          &:hover {
+            box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+          }
+          &:checked {
+            border: none;
+            background-color: a.$bg-lightdark;
+          }
+        }
+      }
+
+      .price {
+        input {
+          height: 18px;
+          font-size: 0.9rem;
+          padding-top: 20px;
+          padding-bottom: 12px;
+          box-shadow: none;
+          &:focus {
+            padding-top: 20px;
+            padding-bottom: 12px;
+          }
+        }
+        label {
+          font-size: 0.8rem;
+          padding: 7px;
+        }
+        .dolar-sign {
+          font-size: 0.8rem;
+          color: a.$text-gray;
+          padding-top: 8px;
+          padding-right: 4px;
+        }
+      }
+
+      .colors {
+        ul {
+          list-style-type: none;
+          padding: 0;
+          li {
+            display: inline-block;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+
+            background-color: red;
             cursor: pointer;
+          }
         }
+      }
 
-        .filter-title {
-            font-size: 1rem;
-            line-height: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
+      .size {
+        input {
+          border: 1px solid a.$bg-lightdark;
+          margin-top: 6px;
+          box-shadow: none;
 
-            color: a.$text-black;
+          &:hover {
+            box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
+          }
+          &:checked {
+            border: none;
+            background-color: a.$bg-lightdark;
+          }
         }
+      }
 
-        .categories-list ul {
-            list-style-type: none;
-        }
-
-        .subtitle {
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-
-            color: a.$text-black;
-        }
-
-        .availability {
-            input {
-                border: 1px solid a.$bg-lightdark;
-                margin-top: 6px;
-                box-shadow: none;
-
-                &:hover {
-                    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.2);
-                }
-                &:checked {
-                    border: none;
-                    background-color: a.$bg-lightdark;
-                }
+      .product-tags {
+        a {
+          &:hover {
+            .tag {
+              color: a.$text-hover;
             }
+          }
+          .tag {
+            font-size: 0.8rem;
+            font-weight: 300;
+            padding: 4px 8px;
+          }
         }
+      }
     }
+  }
+
+  .store-products {
+    .filter-sort-grid {
+      background-color: white;
+      padding: 0.4rem 0.4rem 0.4rem 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 4px 2px rgba(200, 200, 200, 0.5);
+
+      .sort-label {
+        line-height: 30px;
+      }
+      .sort-by-picker {
+        .select-field {
+          width: 200px;
+
+          padding: 0.2rem 1.5rem 0.2rem 0.5rem;
+          outline: none;
+          box-shadow: none;
+          border: none;
+
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          background-color: a.$bg-light;
+        }
+      }
+      .products-counter {
+        font-size: 0.8rem;
+        color: a.$text-gray;
+        margin: 4px 10px 0 0;
+      }
+      .product-layout {
+        .layout-type {
+          display: inline-flex;
+          align-self: center;
+          height: 28px;
+          width: 28px;
+          padding: 0;
+          border-radius: 9px;
+          background-color: a.$bg-light;
+          cursor: pointer;
+          &:hover {
+            background-color: a.$bg-lightdark;
+            img {
+              filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(300deg)
+                brightness(108%) contrast(101%);
+            }
+          }
+          img {
+            height: 16px;
+            width: 16px;
+            object-fit: fill;
+            align-self: center;
+            justify-items: center;
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    .products {
+      .product-card {
+        margin-bottom: 20px;
+
+        &__image {
+          height: 160px;
+          background-image: url("../../../public/images/macbook-air.jpg");
+        }
+      }
+    }
+  }
 }
