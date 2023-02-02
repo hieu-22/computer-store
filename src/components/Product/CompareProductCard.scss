@@ -1,0 +1,56 @@
+@use "../../App.scss" as a;
+
+.compare-product-card {
+  background-color: white;
+  border-radius: 10px;
+  .cross {
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .product-image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+  }
+
+  .prodcut-details {
+    padding: 15px;
+    .title {
+      font-size: 0.9rem;
+      white-space: normal;
+    }
+
+    .infor {
+      div {
+        border-bottom: 1px solid a.$text-gray;
+        padding: 10px 0;
+        span {
+          &:nth-child(1) {
+            color: black;
+            font-size: 0.9rem;
+            font-weight: bold;
+          }
+          &:nth-child(2) {
+            font-size: 0.9rem;
+
+            color: a.$text-gray;
+          }
+        }
+      }
+
+      div.color {
+        span:nth-child(2) {
+          span {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

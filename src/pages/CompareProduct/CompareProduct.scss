@@ -1,0 +1,5 @@
+@use "../../App.scss" as a;
+
+.compare-product-wrapper {
+  background-color: a.$bg-light;
+}

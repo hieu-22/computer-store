@@ -7,10 +7,7 @@ import ProductCard from "../../components/Product/ProductCard"
 import SpecialProductCard from "../../components/Product/SpecialProductCard"
 
 const OurStore = () => {
-  let [grid, setGrid] = useState(4)
-  let changeGrid = (gridTypeId) => {
-    setGrid(gridTypeId)
-  }
+  let [grid, setGrid] = useState(3)
 
   return (
     <>
@@ -220,25 +217,25 @@ const OurStore = () => {
                     <p className="products-counter">21 products</p>
                     <span
                       className="layout-type badge"
-                      onClick={() => changeGrid(4)}
+                      onClick={() => setGrid(3)}
                     >
                       <img src="images/gr4.svg" alt="grid" />
                     </span>
                     <span
                       className="layout-type badge"
-                      onClick={() => changeGrid(3)}
+                      onClick={() => setGrid(4)}
                     >
                       <img src="images/gr3.svg" alt="grid" />
                     </span>
                     <span
                       className="layout-type badge"
-                      onClick={() => changeGrid(2)}
+                      onClick={() => setGrid(6)}
                     >
                       <img src="images/gr2.svg" alt="grid" />
                     </span>
                     <span
                       className="layout-type badge"
-                      onClick={() => changeGrid(1)}
+                      onClick={() => setGrid(12)}
                     >
                       <img src="images/gr.svg" alt="grid" />
                     </span>
@@ -246,45 +243,11 @@ const OurStore = () => {
                 </div>
                 <div className="products">
                   <div className="row">
-                    {grid === 4 ? (
-                      <div className="col-3">
-                        <Link to="#product">
-                          <ProductCard />
-                        </Link>
-                      </div>
-                    ) : grid === 3 ? (
-                      <div className="col-4">
-                        <Link to="#product">
-                          <ProductCard />
-                        </Link>
-                      </div>
-                    ) : (
-                      <div className="col-6">
-                        <Link to="#product">
-                          <SpecialProductCard />
-                        </Link>
-                      </div>
-                    )}
-
-                    {grid === 4 ? (
-                      <div className="col-3">
-                        <Link to="#product">
-                          <ProductCard />
-                        </Link>
-                      </div>
-                    ) : grid === 3 ? (
-                      <div className="col-4">
-                        <Link to="#product">
-                          <ProductCard />
-                        </Link>
-                      </div>
-                    ) : (
-                      <div className="col-6">
-                        <Link to="#product">
-                          <SpecialProductCard />
-                        </Link>
-                      </div>
-                    )}
+                    <ProductCard gridType={grid} />
+                    <ProductCard gridType={grid} />
+                    <ProductCard gridType={grid} />
+                    <ProductCard gridType={grid} />
+                    <ProductCard gridType={grid} />
                   </div>
                 </div>
               </div>

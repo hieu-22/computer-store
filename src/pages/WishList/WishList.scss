@@ -1,0 +1,10 @@
+@use "../../App.scss" as a;
+
+.wishlist-wrapper {
+  background-color: a.$bg-light;
+  .product-card {
+    &__image {
+      background-image: url();
+    }
+  }
+}

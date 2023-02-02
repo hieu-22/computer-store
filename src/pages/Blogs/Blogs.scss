@@ -1,0 +1,55 @@
+@use "../../App.scss" as a;
+
+.blogs-wrapper {
+  background-color: a.$bg-light;
+
+  .store-filter {
+    .filter-card {
+      background-color: white;
+      border-radius: 5px;
+      padding: 15px 25px 25px 15px;
+      box-shadow: 0 0 4px 2px rgba(200, 200, 200, 0.5);
+
+      // use for all filter-card content
+      .filter-content {
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+        color: a.$text-gray;
+        cursor: pointer;
+      }
+
+      .filter-title {
+        font-size: 1rem;
+        line-height: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+        color: a.$text-black;
+      }
+
+      .categories-list ul {
+        list-style-type: none;
+        margin: 0;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin: 25px 0 10px 0;
+
+        color: a.$text-black;
+      }
+    }
+  }
+
+  .blogs-list {
+    .blog-card {
+      box-shadow: 0 0 4px 2px rgba(200, 200, 200, 0.5);
+      margin-top: 24px;
+    }
+    .blog-card__image {
+      background-image: url("../../../public//images/blog-1.jpg");
+      height: 280px;
+    }
+  }
+}
